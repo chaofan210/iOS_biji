@@ -1,7 +1,6 @@
 # iOS_biji
 
-``` Objective C
-
+```Objective-C
 +(NSString *)GetTomorrowDay:(NSDate *)aDate
 {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSChineseCalendar];
@@ -13,5 +12,4 @@
     [dateday setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     return [dateday stringFromDate:beginningOfWeek];
 }
-
 ```
