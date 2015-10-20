@@ -1,6 +1,34 @@
 # iOS_biji 
-```Objective-C
-    
+```Objective-C 
+- (NSString *)timeToTranslate:(int)time
+{
+    int minutes = 0;
+    int seconds = 0;
+    minutes = time / 60;
+    seconds = time % 60;
+    if (minutes == 0) {
+        return [NSString stringWithFormat:@"%.2d秒",seconds];
+    }
+    return [NSString stringWithFormat:@"%.2d分%.2d秒",minutes,seconds];
+}
+
+
+#program - mark 
+- (NSString *)getFileSizeString:(NSString *)size
+{
+    if([size floatValue]>=1024*1024)
+    {
+        return [NSString stringWithFormat:@"%1.2fM",[size floatValue]/1024/1024];
+    }
+    else if([size floatValue]>=1024&&[size floatValue]<1024*1024)
+    {
+        return [NSString stringWithFormat:@"%1.2fK",[size floatValue]/1024];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"%1.2fB",[size floatValue]];
+    }
+}
 ```
 
 ```Objective-C
